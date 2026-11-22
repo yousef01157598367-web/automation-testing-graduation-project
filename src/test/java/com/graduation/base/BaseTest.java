@@ -9,7 +9,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
+import org.openqa.selenium.Dimension;
 public class BaseTest {
 
     protected final Logger log = LogManager.getLogger(getClass());
@@ -18,8 +18,12 @@ public class BaseTest {
     public void setUp() {
         DriverManager.initDriver();
         WebDriver driver = DriverManager.getDriver();
-        driver.manage().window().maximize();
-        driver.get(ConfigReader.getBaseUrl() + "auth/login");
+
+        if (ConfigReader.isHeadless()) {
+            driver.manage().window().setSize(new Dimension(1920, 1080));
+        } else {
+            driver.manage().window().maximize();
+        }        driver.get(ConfigReader.getBaseUrl() + "auth/login");
         log.info("Browser started and login page opened");
     }
 
