@@ -34,7 +34,8 @@ public final class DriverManager {
             default:
                 ChromeOptions chrome = new ChromeOptions();
                 chrome.addArguments("--remote-allow-origins=*");
-                if (headless) chrome.addArguments("--headless=new", "--window-size=1920,1080");
+                if (headless) chrome.addArguments("--headless=new", "--window-size=1920,1080",
+                        "--no-sandbox", "--disable-dev-shm-usage");
                 driver = new ChromeDriver(chrome);
                 break;
         }
