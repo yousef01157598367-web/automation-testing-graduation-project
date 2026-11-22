@@ -1,0 +1,13 @@
+{
+  "validUser": { "username": "Admin", "password": "admin123" },
+  "invalidLogins": [
+    { "username": "wrongUser", "password": "wrong123" },
+    { "username": "Admin", "password": "badPassword" },
+    { "username": "fakeAdmin", "password": "admin123" }
+  ],
+  "knownEmployee": "Paul",
+  "invalidEmployee": "Zzxqwvk Nonexisting",
+  "newEmployee": { "firstName": "Graduation", "lastName": "Tester" },
+  "addUserFields": ["User Role", "Employee Name", "Username", "Password"],
+  "sidebarItems": ["Admin", "PIM", "Leave", "Time", "Recruitment", "My Info", "Performance", "Dashboard", "Directory"]
+}

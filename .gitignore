@@ -1,0 +1,18 @@
+# Build
+target/
+out/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Logs
+logs/
+
+# Allure raw results (do NOT commit) -- allure-report/ IS committed
+allure-results/
+.allure/
+
+.DS_Store
+.jdks/

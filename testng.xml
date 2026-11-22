@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="OrangeHRM Automation Suite" parallel="tests" thread-count="3">
+
+    <listeners>
+        <listener class-name="com.graduation.listeners.TestListener"/>
+        <listener class-name="com.graduation.listeners.RetryTransformer"/>
+    </listeners>
+
+    <test name="Login Tests">
+        <classes>
+            <class name="com.graduation.tests.LoginTests"/>
+        </classes>
+    </test>
+
+    <test name="PIM Tests">
+        <classes>
+            <class name="com.graduation.tests.PimTests"/>
+        </classes>
+    </test>
+
+    <test name="Admin and UI Tests">
+        <classes>
+            <class name="com.graduation.tests.AdminAndUiTests"/>
+        </classes>
+    </test>
+
+</suite>
